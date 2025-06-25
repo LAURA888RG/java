@@ -1,14 +1,10 @@
 import base.Dog;
 import base.Person;
 import base.Pet;
-import base.Square;
-import game.Character;
-import game.Role;
-import game.Species;
 
-public class App {
+public class AppPets {
 
-    static void playWithPersons() {
+    static void playWithDog() {
         Person person1 = new Person("Pepe", 22);
         // Person.countInstances++;
 
@@ -27,23 +23,10 @@ public class App {
         System.out.println(Person.countInstances);
     }
 
-    static void prepareGame() {
-        Character char1 = new Character("Pepe", Species.ELFO, 100, 50, Role.MAGO, false);
-        char1.showCharacter();
-        Character char2 = new Character("Pepe", Species.ORCO, 120, 500, Role.PEON, false);
-        char2.showCharacter();
-        
-        char1.renameInvalidCharacters("Elfo Pepe");
+  
+    public static void playWithCat() {
 
-        Character.showList();
-        char2.renameInvalidCharacters("Orco Pepe");
-        char2.showCharacter();
-        Character.showList();
-    }
-
-    public static void playPets() {
-
-        Dog pet1 = new Dog("Rufus", 2);
+        Pet pet1 = new Cat("Silvestre", 1);
         System.out.println(pet1 instanceof Dog);
         System.out.println(pet1 instanceof Pet);
         System.out.println(pet1 instanceof Object);
