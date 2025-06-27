@@ -8,15 +8,18 @@ public interface IContainer {
 
 //Getters
  String getReference();
- int getVolume();
- int getSurface();
- int getResistance();
- ContainerType geType();
- Set<IProduct> getProductos();
- 
- //logica negocio
- int volumeDisposable();
+// int getResistance();
+ ContainerType getType();
+ Set<IProduct> getProducts();
 
+ //propiedades calculadas
+ 
+ int calculateSurface();
+ int calculateVolume();
+ 
+ //logica negocio 
+ int volumeDisposable();
+ 
  boolean canInsert(IProduct product);
  boolean isResistantTo(IProduct product);
 
